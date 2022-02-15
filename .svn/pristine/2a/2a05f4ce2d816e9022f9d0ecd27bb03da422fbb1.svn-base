@@ -1,0 +1,31 @@
+import test from '@/uni_modules/uview-ui/libs/function/test.js'
+
+export default {
+	//用户绑定
+	bind:{
+		// 手机号
+		phoneNumber: [
+			{
+				required: true,
+				message: '业主手机不能为空',
+			},
+			{
+				validator: (rule, value, callback) => {
+					return test.mobile(value);
+				},
+				message: '业主手机不符合规则',
+			}
+		],
+		
+		
+		// 短信验证码
+		smsCode: [
+			{
+				required: true,
+				len: 6,
+				message: '请输入6位验证码',
+			},
+		]
+	},
+
+}

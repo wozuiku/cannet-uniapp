@@ -1,0 +1,282 @@
+.auth-wrap{
+	display: flex;
+	flex-direction: column;
+	background-color: #FFF;
+	height: 100vh;
+	
+	.register-box{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		
+		.register-header{
+			width: 100%;
+			height: 480rpx;
+			background-image: url('/static/images/auth/login_bg.png');
+			background-size: 100% 480rpx;
+			display: flex;
+			flex-direction: column;
+			.register-welcome-line1{
+				padding-top: 160rpx;
+				padding-left: 60rpx;
+				font-size: 48rpx;
+				color: #FFF;
+			}
+			
+			.register-welcome-line2{
+				padding-top: 6rpx;
+				padding-left: 60rpx;
+				font-size: 28rpx;
+				color: #FFF;
+				opacity: 0.6;
+			}
+			
+		}
+		
+		.register-form{
+			background-color: #FFF;
+			
+			.password-image{
+				width: 36rpx;
+				height: 36rpx;
+			}
+			
+			.register-phonenumber{
+				width: 100%;
+			}
+			
+			.register-password{
+				width: 100%;
+			}
+			
+			.register-confirmpassWord{
+				width: 100%;
+			}
+			
+			.register-fullname{
+				width: 100%;
+			}
+			
+			.register-phonenumber{
+				width: 100%;
+			}
+			
+			.register-smscode{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				
+				.register-smscode-left{
+					flex: 8;
+					padding-right: 12rpx;
+				}
+				
+				.register-smscode-right{
+					//flex: 2;
+					.register-smscode-btn{
+						// margin-left: 10rpx;
+						// color: #72ACC1;
+						// width: 140rpx;
+						width: 180rpx;
+						font-size: 24rpx;
+					}
+					
+				}
+			}
+			
+			.register-agreement-text {
+				font-size: 26rpx;
+				font-weight: 500;
+				color: #999999;
+			}
+			.register-protocol-text {
+				padding-left: 12rpx;
+				padding-right: 12rpx;
+				color: #4B82BA;
+			}
+			
+			.register-submit-btn-box{
+				padding: 10rpx 30rpx 0 30rpx ;
+				.register-submit-btn{
+					color: #FFF;
+					line-height: 80rpx;
+				}
+			}
+			.register-login-box{
+				display: flex;
+				justify-content: center;
+				margin-top: 60rpx;
+				margin-bottom: 60rpx;
+				.register-login-text {
+					padding-left: 12rpx;
+					color: #007CFF;
+				}
+				
+			}
+		}
+	}
+	
+	.login-box{
+		//background-color: #01ADFB;
+		.login-header{
+			width: 100%;
+			height: 480rpx;
+			background-image: url('/static/images/auth/login_bg.png');
+			background-size: 100% 480rpx;
+			display: flex;
+			flex-direction: column;
+			.login-welcome-line1{
+				padding-top: 160rpx;
+				padding-left: 60rpx;
+				font-size: 48rpx;
+				color: #FFF;
+			}
+			
+			.login-welcome-line2{
+				padding-top: 6rpx;
+				padding-left: 60rpx;
+				font-size: 28rpx;
+				color: #FFF;
+				opacity: 0.6;
+			}
+		}
+		
+		.login-form{
+			background-color: #FFF;
+			padding-top: 22rpx;
+			//border-radius: 22rpx 22rpx 0 0;
+			
+			.password-image{
+				width: 36rpx;
+				height: 36rpx;
+			}
+			
+			.login-forgotpwd-box{
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+				.login-forgotpwd{
+					color: #007CFF;
+					
+				}
+				
+			}
+			
+			.login-agreement-text {
+				font-size: 26rpx;
+				font-weight: 500;
+				color: #999999;
+			}
+			
+			.login-protocol-text{
+				color: #4B82BA;
+			}
+			
+			.login-forgot-btn{
+				color: #72ACC1;
+			}
+			
+			
+			.login-submit-btn-box{
+				padding: 30rpx 30rpx 0 30rpx ;
+				.login-submit-btn{
+					color: #FFF;
+					line-height: 80rpx;
+				}
+			}
+			
+			.login-question-register-box{
+				display: flex;
+				justify-content: center;
+				padding-top:240rpx;
+				padding-bottom:30rpx;
+				
+				.login-question{
+					padding-right: 10rpx;
+				}
+				
+				.login-register{
+					padding-right: 30rpx;
+					color: #007CFF;
+					
+				}
+			}
+		}
+	}
+	
+	.forgotpwd-box{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: #01ADFB;
+		
+		.forgotpwd-header{
+			width: 100%;
+			//height: 120rpx;
+		}
+		
+		.forgotpwd-form{
+			background-color: #FFF;
+			//padding-top: 22rpx;
+			//border-radius: 22rpx 22rpx 0 0;
+			
+			.password-image{
+				width: 36rpx;
+				height: 36rpx;
+			}
+			
+			.forgotpwd-phonenumber{
+				width: 100%;
+			}
+			
+			.forgotpwd-smscode{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				
+				.forgotpwd-smscode-left{
+					flex: 8;
+					padding-right: 12rpx;
+				}
+				
+				.forgotpwd-smscode-right{
+					//flex: 2;
+					
+					.forgotpwd-smscode-btn{
+						width: 180rpx;
+						font-size: 24rpx;
+					}
+				}
+			}
+			
+			.forgotpwd-password{
+				width: 100%;
+			}
+			
+			.forgotpwd-confirmpassWord{
+				width: 100%;
+			}
+			
+			
+			
+			
+			.forgotpwd-submit-btn-box{
+				padding: 60rpx 30rpx 0 30rpx ;
+				.forgotpwd-submit-btn{
+					color: white;
+					line-height: 80rpx;
+				}
+			}
+			
+			.forgotpwd-login-btn{
+				padding-top: 30rpx;
+				color: #72ACC1;
+				font-size: 32rpx;
+			}
+		}
+		
+	}
+	
+}

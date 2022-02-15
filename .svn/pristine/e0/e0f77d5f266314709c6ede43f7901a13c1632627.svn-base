@@ -1,0 +1,28 @@
+.action-wrap{
+	display: flex;
+	flex-direction: column;
+	.line{
+		display: flex;
+		.item{
+			flex:5;
+			height: 280rpx;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: #FFF;
+			
+			.image-icon {
+				width: 120rpx;
+				height: 120rpx;
+			}
+			
+			.image-name {
+				margin-top: 22rpx;
+				color: #303133;
+				font-size: 26rpx;
+			}
+			
+		}
+	}
+}

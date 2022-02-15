@@ -1,0 +1,245 @@
+.auth-wrap{
+	display: flex;
+	flex-direction: column;
+	
+	background-color: #FFF;
+	height: 100vh;
+	
+	.register-box{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: #01ADFB;
+		
+		.register-header{
+			width: 100%;
+			height: 120rpx;
+		}
+		
+		.register-form{
+			background-color: #FFF;
+			padding-top: 22rpx;
+			border-radius: 22rpx 22rpx 0 0;
+			
+			.register-phonenumber{
+				width: 100%;
+			}
+			
+			.register-password{
+				width: 100%;
+			}
+			
+			.register-confirmpassWord{
+				width: 100%;
+			}
+			
+			.register-fullname{
+				width: 100%;
+			}
+			
+			.register-phonenumber{
+				width: 100%;
+			}
+			
+			.register-smscode{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				
+				.register-smscode-left{
+					flex: 8;
+					padding-right: 12rpx;
+				}
+				
+				.register-smscode-right{
+					//flex: 2;
+					.register-smscode-btn{
+						// margin-left: 10rpx;
+						// color: #72ACC1;
+						// width: 140rpx;
+						width: 180rpx;
+						font-size: 24rpx;
+					}
+					
+				}
+			}
+			
+			.register-agreement-text {
+				font-size: 26rpx;
+				font-weight: 500;
+				color: #999999;
+			}
+			.register-protocol-text {
+				color: #4B82BA;
+			}
+			
+			.register-submit-btn-box{
+				padding: 10rpx 30rpx 0 30rpx ;
+				.register-submit-btn{
+					color: #FFF;
+					line-height: 80rpx;
+				}
+			}
+			.register-login-question-box{
+				margin: 26rpx 0;
+				.register-login-text {
+					padding-left: 30rpx;
+					color: #72ACC1;
+				}
+				.register-login-question{
+					padding-right: 30rpx;
+				}
+			}
+		}
+	}
+	
+	.login-box{
+		background-color: #01ADFB;
+		.login-header{
+			width: 100%;
+			height: 540rpx;
+			.auth-header-image{
+				width: 100%;
+				height: 540rpx;
+			}
+		}
+		
+		.login-form{
+			background-color: #FFF;
+			padding-top: 22rpx;
+			border-radius: 22rpx 22rpx 0 0;
+			.login-agreement-text {
+				font-size: 26rpx;
+				font-weight: 500;
+				color: #999999;
+			}
+			
+			.login-protocol-text{
+				color: #4B82BA;
+			}
+			
+			.login-forgot-btn{
+				color: #72ACC1;
+			}
+			
+			.account-login-username{
+				width: 100%;
+			}
+			
+			.account-login-password{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				
+				.account-login-password-left{
+					flex: 8;
+					padding-right: 12rpx;
+				}
+				
+				.account-login-password-right{
+					//flex: 2;
+				}
+			}
+			
+			
+			
+			.login-submit-btn-box{
+				padding: 30rpx 30rpx 0 30rpx ;
+				.login-submit-btn{
+					color: #FFF;
+					line-height: 80rpx;
+				}
+			}
+			
+			.login-question-register-box{
+				display: flex;
+				justify-content: flex-end;
+				padding-top:30rpx;
+				padding-bottom:30rpx;
+				
+				.login-question{
+					padding-right: 10rpx;
+				}
+				
+				.login-register{
+					padding-right: 30rpx;
+					.login-register-btn{
+						color: #72ACC1;
+					}
+				}
+			}
+		}
+	}
+	
+	.forgotpwd-box{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: #01ADFB;
+		
+		.forgotpwd-header{
+			width: 100%;
+			height: 120rpx;
+		}
+		
+		.forgotpwd-form{
+			background-color: #FFF;
+			padding-top: 22rpx;
+			border-radius: 22rpx 22rpx 0 0;
+			
+			.forgotpwd-phonenumber{
+				width: 100%;
+			}
+			
+			.forgotpwd-smscode{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				width: 100%;
+				
+				.forgotpwd-smscode-left{
+					flex: 8;
+					padding-right: 12rpx;
+				}
+				
+				.forgotpwd-smscode-right{
+					//flex: 2;
+					
+					.forgotpwd-smscode-btn{
+						width: 180rpx;
+						font-size: 24rpx;
+					}
+				}
+			}
+			
+			.forgotpwd-password{
+				width: 100%;
+			}
+			
+			.forgotpwd-confirmpassWord{
+				width: 100%;
+			}
+			
+			
+			
+			
+			.forgotpwd-submit-btn-box{
+				padding: 60rpx 30rpx 0 30rpx ;
+				.forgotpwd-submit-btn{
+					color: white;
+					line-height: 80rpx;
+				}
+			}
+			
+			.forgotpwd-login-btn{
+				padding-top: 30rpx;
+				color: #72ACC1;
+				font-size: 32rpx;
+			}
+		}
+		
+	}
+	
+}

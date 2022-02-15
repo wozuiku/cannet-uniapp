@@ -1,0 +1,59 @@
+// 基本信息
+.info-head {
+	display: flex;
+	justify-content: space-between;
+	padding: 20rpx 30rpx;
+	.info-title {
+		line-height: 60rpx;
+		font-size: 28rpx;
+		font-weight: 600;
+		color: #333333;
+	}
+	.save-btn {
+		width: 120rpx;
+		border-radius: 30rpx;
+		height: 56rpx;
+		line-height: 56rpx;
+		font-size: 22rpx;
+	}
+	.dis-btn {
+		opacity: 0.5;
+	}
+}
+
+// 个人信息项
+.user-list {
+	background: #fff;
+	height: 100rpx;
+	border-bottom: 1rpx solid #f6f6f6;
+	padding: 0 20rpx;
+	.list-name {
+		font-size: 28rpx;
+	}
+	.avatar {
+		width: 67rpx;
+		height: 67rpx;
+		border-radius: 50%;
+	}
+	.list-val {
+		color: #999;
+		font-size: 28rpx;
+		text-align: right;
+	}
+}
+
+.btn-box {
+	margin-top: 200rpx;
+	
+
+	.logout-btn {
+		width: 710rpx;
+		height: 80rpx;
+		line-height: 80rpx;
+		font-size: 30rpx;
+		font-weight: 500;
+		color: white;
+		
+	}
+	
+}

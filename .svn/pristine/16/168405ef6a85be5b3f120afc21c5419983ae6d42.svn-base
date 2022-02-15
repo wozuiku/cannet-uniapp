@@ -1,0 +1,35 @@
+import { mapMutations, mapActions, mapState, mapGetters } from 'vuex';
+
+export default {
+	
+	data(){
+		return {
+			userInfo: {},
+			isLogin: false,
+		}
+	},
+	
+	
+	onLoad(){
+		this.userInfo = uni.getStorageSync('userInfo')
+		console.log('onLoad userInfo:', this.userInfo);
+		if(this.userInfo){
+			this.isLogin = true
+		}
+	},
+	
+	
+	computed: {
+		// ...mapGetters(['isLogin', 'userInfo', 'authType']),
+	},
+	
+	methods: {
+		logout(){
+			uni.setStorageSync('userInfo', '')
+			uni.setStorageSync('apiToken', '')
+			uni.navigateTo({
+				url: '/pages/auth/index'
+			})
+		}
+	},
+}

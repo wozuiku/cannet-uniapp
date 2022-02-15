@@ -1,0 +1,203 @@
+<template>
+	<view class="auth-wrap">
+		<view v-if="authType == 'register'" class="register-box">
+			<view class="register-header">
+
+			</view>
+
+			<view class="register-form">
+				<form>
+					<view class="cu-form-group">
+						<view class="register-phonenumber">
+							<u-input v-model="form['register'].data.accountName" placeholder="用户名" />
+						</view>
+					</view>
+
+					<view class="cu-form-group">
+						<view class="register-password">
+							<u-input v-model="form['register'].data.passWord" placeholder="密码" type="password" />
+						</view>
+					</view>
+
+					<view class="cu-form-group">
+						<view class="register-confirmpassWord">
+							<u-input v-model="form['register'].data.confirmPassWord" placeholder="确认密码" type="password" />
+						</view>
+						
+					</view>
+
+					<view class="cu-form-group">
+						<view class="register-fullname">
+							<u-input v-model="form['register'].data.fullName" placeholder="全名" />
+						</view>
+					</view>
+
+					<view class="cu-form-group">
+						<view class="register-phonenumber">
+							<u-input v-model="form['register'].data.phoneNumber" placeholder="手机号" @input="checkPhoneNumber"/>
+						</view>
+						
+					</view>
+
+					<view class="cu-form-group">
+						<view class="register-smscode">
+							<view class="register-smscode-left">
+								<u-input v-model="form['register'].data.verificationCode" placeholder="验证码" />
+							</view>
+							
+							<view class="register-smscode-right">
+								<!-- <button class="u-reset-button register-smscode-btn" :disabled="disabledCode"
+									@tap="getSmsCode('1')">{{codeText}}</button> -->
+								<button class='cu-btn bg-blue register-smscode-btn' :disabled="disabledCode" type="" @tap="getSmsCode('1')">{{codeText}}</button>
+							</view>
+						</view>
+						
+						
+					</view>
+					<view class="cu-form-group">
+						<u-checkbox v-model="protocol" shape="circle">
+							<view class="u-flex register-agreement-text">
+								我已阅读并同意
+								<view class="register-protocol-text"
+									@tap="$Router.push({ path: '/pages/public/richtext'})">
+									《用户服务协议》、</view>
+								<view class="register-protocol-text"
+									@tap="$Router.push({ path: '/pages/public/richtext'})">
+									《隐私声明》</view>
+							</view>
+						</u-checkbox>
+					</view>
+
+					<view class="register-submit-btn-box">
+						<button class="bg-gradual-blue register-submit-btn shadow" @click="registerSubmit">注册</button>
+					</view>
+
+					<view class="flex justify-between register-login-question-box">
+						<view>
+							<button class="u-reset-button register-login-text"
+								@tap="jumpAccountLogin">已有账号，马上登录</button>
+						</view>
+						<view class="register-login-question" @tap="$Router.push({ path: '/pages/public/richtext'})">
+							遇到问题？
+						</view>
+					</view>
+				</form>
+			</view>
+		</view>
+
+		<view v-if="authType == 'accountLogin'" class="login-box">
+			<view class="login-header">
+				<image class="auth-header-image" src="/static/images/auth/auth.jpeg"></image>
+
+			</view>
+			<view class="login-form">
+				<form>
+					<view class="cu-form-group">
+						<view class="account-login-username">
+							<u-input v-model="form['accountLogin'].data.loginName" placeholder="手机号/用户名" />
+						</view>
+					</view>
+					<view class="cu-form-group">
+						<view class="account-login-password">
+							<view class="account-login-password-left">
+								<u-input v-model="form['accountLogin'].data.passWord" placeholder="密码"
+									type="password" />
+							</view>
+							<view class="account-login-password-right">
+								<button class="u-reset-button login-forgot-btn" @tap="jumpForgotPwd">忘记密码</button>
+							</view>
+						</view>
+					</view>
+					<view class="cu-form-group">
+						<u-checkbox v-model="protocol" shape="circle">
+							<view class="u-flex login-agreement-text">
+								我已阅读并同意
+								<view class="login-protocol-text"
+									@tap="$Router.push({ path: '/pages/public/richtext'})">
+									《用户服务协议》、</view>
+								<view class="login-protocol-text"
+									@tap="$Router.push({ path: '/pages/public/richtext'})">
+									《隐私声明》</view>
+							</view>
+						</u-checkbox>
+					</view>
+					
+					<view class="login-submit-btn-box">
+						<button class="bg-gradual-blue login-submit-btn shadow" @click="accountLoginSubmit">登录</button>
+					</view>
+					
+					<view class="login-question-register-box">
+						<view class="login-question" @tap="$Router.push({ path: '/pages/public/richtext'})">遇到问题？</view>
+						<view class="login-register">
+							<button class="u-reset-button login-register-btn" @tap="jumpRegister">立即注册</button>
+						</view>
+					</view>
+				</form>
+			</view>
+
+
+		</view>
+
+		<view v-if="authType == 'forgotPwd'" class="forgotpwd-box">
+
+			<view class="forgotpwd-header">
+
+			</view>
+
+			<view class="forgotpwd-form">
+
+				<form>
+					<view class="cu-form-group">
+						<view class="forgotpwd-phonenumber">
+							<u-input v-model="form['forgotPwd'].data.phoneNumber" placeholder="手机号" @input="checkPhoneNumber"/>
+						</view>
+					</view>
+
+					<view class="cu-form-group">
+						<view class="forgotpwd-smscode">
+							<view class="forgotpwd-smscode-left">
+								<u-input v-model="form['forgotPwd'].data.verificationCode" placeholder="验证码" @input=""/>
+							</view>
+							<view class="forgotpwd-smscode-right">
+								<!-- <button class="u-reset-button forgotpwd-smscode-btn" :disabled="disabledCode"
+									@tap="getSmsCode('3')">{{codeText}}</button> -->
+								<button class='cu-btn bg-blue forgotpwd-smscode-btn' :disabled="disabledCode" type="" @tap="getSmsCode('3')">{{codeText}}</button>
+							</view>
+						</view>
+					</view>
+
+					<view class="cu-form-group">
+						<view class="forgotpwd-password">
+							<u-input v-model="form['forgotPwd'].data.passWord" placeholder="密码" type="password" />
+						</view>
+					</view>
+
+					<view class="cu-form-group solid-bottom">
+						<view class="forgotpwd-confirmpassWord">
+							<u-input v-model="form['forgotPwd'].data.confirmPassWord" placeholder="确认密码" type="password" />
+						</view>
+					</view>
+
+					<view class="forgotpwd-submit-btn-box">
+						<button class="bg-gradual-blue forgotpwd-submit-btn shadow" @tap="forgotPwdSubmit">提交</button>
+					</view>
+
+					<view class="forgotpwd-login-btn">
+						<button class="u-reset-button" @tap="jumpAccountLogin">返回登录</button>
+					</view>
+				</form>
+
+			</view>
+			
+		</view>
+	</view>
+</template>
+
+<script>
+	import Main from "./main";
+	export default Main;
+</script>
+
+<style lang="scss" scoped>
+	@import './main.scss'
+</style>

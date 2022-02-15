@@ -1,0 +1,45 @@
+.add-wrap{
+	display: flex;
+	flex-direction: column;
+	background-color: #FFF;
+	width: 100%;
+	height: 100vh;
+	.prompt-text{
+		padding: 22rpx;
+		font-size: 26rpx;
+		
+	}
+	.scan-image-box{
+		display: flex;
+		justify-content: center;
+		padding-top: 80rpx;
+		.scan-image{
+			width: 280rpx;
+			height: 280rpx;
+		}
+	}
+	
+	.scan-btn-box{
+		display: flex;
+		justify-content: center;
+		padding-top: 66rpx;
+		
+		.scan-btn{
+			width: 360rpx;
+			font-size: 32rpx;
+		}
+		
+	}
+	
+	.input-btn-box{
+		display: flex;
+		justify-content: center;
+		padding-top:42rpx;
+		.input-btn{
+			width: 360rpx;
+			font-size: 32rpx;
+			background-color: #FFF;
+		}
+		
+	}
+}

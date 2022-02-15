@@ -1,0 +1,61 @@
+.bill-wrap{
+	.top-wrap{
+		position: relative;
+		height: 360rpx;
+		background-image: url('/static/images/charge/balance_bg.png');
+		background-size: 100% 360rpx;
+		display: flex;
+		flex-direction: column;
+		.user-message{
+			display: flex;
+			flex-direction: column;
+			padding-top: 90rpx;
+			padding-left: 30rpx;
+			.user-address{
+				color: #FFF;
+				font-size: 32rpx;
+			}
+			.user-number{
+				color: #FFF;
+				padding-top: 12rpx;
+				display: flex;
+				align-items: center;
+				.user-number-label{
+					
+				}
+				.user-number-text{
+					
+				}
+			}
+			.user-location{
+				color: #FFF;
+				padding-top: 12rpx;
+				display: flex;
+				align-items: center;
+				.user-location-icon{
+					height: 33rpx;
+					width: 33rpx;
+					color: #FFF;
+					
+				}
+				.user-location-text{
+					padding-left: 12rpx;
+				}
+			}
+		}
+	}
+	
+	.float-wrap{
+		position: absolute;
+		top: 260rpx;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.content-wrap{
+			width: 90%;
+		}
+		
+	}
+	
+}

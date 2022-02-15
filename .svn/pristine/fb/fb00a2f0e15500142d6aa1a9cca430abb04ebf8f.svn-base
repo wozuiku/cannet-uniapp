@@ -1,0 +1,198 @@
+.auth-wrap{
+	display: flex;
+	flex-direction: column;
+	background-color: #FFF;
+	height: 100vh;
+	
+	.register-box{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		
+		.register-header{
+			width: 100%;
+			height: 480rpx;
+			background-image: url('/static/images/auth/login_bg.png');
+			background-size: 100% 480rpx;
+			display: flex;
+			flex-direction: column;
+			.register-welcome-line1{
+				padding-top: 160rpx;
+				padding-left: 60rpx;
+				font-size: 48rpx;
+				color: #FFF;
+			}
+			
+			.register-welcome-line2{
+				padding-top: 6rpx;
+				padding-left: 60rpx;
+				font-size: 28rpx;
+				color: #FFF;
+				opacity: 0.6;
+			}
+			
+		}
+		
+		.register-form{
+			background-color: #FFF;
+			
+			.password-image{
+				width: 36rpx;
+				height: 36rpx;
+			}
+			
+			
+			.register-agreement-text {
+				font-size: 26rpx;
+				font-weight: 500;
+				color: #999999;
+			}
+			.register-protocol-text {
+				padding-left: 12rpx;
+				padding-right: 12rpx;
+				color: #4B82BA;
+			}
+			
+			.register-submit-btn-box{
+				padding: 10rpx 30rpx 0 30rpx ;
+				.register-submit-btn{
+					color: #FFF;
+					line-height: 80rpx;
+				}
+			}
+			.register-login-box{
+				display: flex;
+				justify-content: center;
+				margin-top: 60rpx;
+				margin-bottom: 60rpx;
+				.register-login-text {
+					padding-left: 12rpx;
+					color: #007CFF;
+				}
+			}
+		}
+	}
+	
+	.login-box{
+	
+		.login-header{
+			width: 100%;
+			height: 480rpx;
+			background-image: url('/static/images/auth/login_bg.png');
+			background-size: 100% 480rpx;
+			display: flex;
+			flex-direction: column;
+			.login-welcome-line1{
+				padding-top: 160rpx;
+				padding-left: 60rpx;
+				font-size: 48rpx;
+				color: #FFF;
+			}
+			
+			.login-welcome-line2{
+				padding-top: 6rpx;
+				padding-left: 60rpx;
+				font-size: 28rpx;
+				color: #FFF;
+				opacity: 0.6;
+			}
+		}
+		
+		.login-form{
+			background-color: #FFF;
+			padding-top: 22rpx;
+			
+			
+			.password-image{
+				width: 36rpx;
+				height: 36rpx;
+			}
+			
+			.login-forgotpwd-box{
+				width: 100%;
+				display: flex;
+				justify-content: flex-end;
+				.login-forgotpwd{
+					color: #007CFF;
+					
+				}
+				
+			}
+			
+			.login-forgot-btn{
+				color: #72ACC1;
+			}
+			
+			
+			.login-submit-btn-box{
+				padding: 30rpx 30rpx 0 30rpx ;
+				.login-submit-btn{
+					color: #FFF;
+					line-height: 80rpx;
+				}
+			}
+			
+			.login-question-register-box{
+				display: flex;
+				justify-content: center;
+				padding-top:240rpx;
+				padding-bottom:30rpx;
+				
+				.login-question{
+					padding-right: 10rpx;
+				}
+				
+				.login-register{
+					padding-right: 30rpx;
+					color: #007CFF;
+					
+				}
+			}
+		}
+	}
+	
+	.forgotpwd-box{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		background-color: #01ADFB;
+		
+		.forgotpwd-header{
+			width: 100%;
+			//height: 120rpx;
+		}
+		
+		.forgotpwd-form{
+			background-color: #FFF;
+			//padding-top: 22rpx;
+			//border-radius: 22rpx 22rpx 0 0;
+			
+			.password-image{
+				width: 36rpx;
+				height: 36rpx;
+			}
+			
+			
+			.forgotpwd-submit-btn-box{
+				padding: 60rpx 30rpx 0 30rpx ;
+				.forgotpwd-submit-btn{
+					color: white;
+					line-height: 80rpx;
+				}
+			}
+			
+			.forgotpwd-login-box{
+				display: flex;
+				justify-content: center;
+				margin-top: 60rpx;
+				margin-bottom: 60rpx;
+				.forgotpwd-login-text {
+					padding-left: 12rpx;
+					color: #007CFF;
+				}
+			}
+		}
+		
+	}
+	
+}

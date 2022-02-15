@@ -1,0 +1,38 @@
+export default {
+	data(){
+		return{
+			index: -1,
+			picker: ['2022年', '2021年', '2020年'],
+			balanceItem: {},
+			billList: [],
+		}
+	},
+	
+	onLoad(options){
+		this.balanceItem  = JSON.parse(decodeURIComponent(options.balanceItem));
+		console.log('onLoad options.balanceItem:', options.balanceItem);
+		console.log('onLoad balanceItem:', this.balanceItem);
+		
+		this.init()
+	},
+	
+	methods:{
+		init(){
+			this.$http('bill.industry', {
+				'RoomId': this.balanceItem.roomId,
+				'FeesTime': '2021-12-01'
+			}).then(res => {
+				if (res.code === 200) {
+					this.billList = res.data
+					console.log('this.billList:', this.billList);
+					
+				}
+			})
+		},
+		
+		PickerChange(e) {
+			this.index = e.detail.value
+		},
+		
+	}
+}

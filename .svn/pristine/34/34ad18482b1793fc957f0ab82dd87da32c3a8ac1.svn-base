@@ -1,0 +1,120 @@
+import http from '@/common/request/index'
+import store from '@/store'
+
+const state = {
+	token: uni.getStorageSync("token") || "",
+	isLogin: uni.getStorageSync("isLogin") || false, // 是否登陆
+	authType: 'accountLogin', // smsLogin:手机号登录注册, accountLogin:密码登录, forgotPwd:忘记密码, changePwd:修改密码, bindMobile:绑定手机号
+	userInfo: uni.getStorageSync("userInfo") || {}, // 用户信息
+}
+
+const getters = {
+	token: state => state.token,
+	isLogin: state => state.isLogin,
+	authType: state => state.authType,
+	userInfo: state => state.userInfo,
+}
+
+const mutations = {
+	token(state, payload) {
+		state.token = payload;
+		uni.setStorageSync("token", payload);
+	},
+	// 登录态
+	isLogin(state, data) {
+		state.isLogin = data;
+		uni.setStorageSync('isLogin', data);
+	},
+	// 用户信息
+	userInfo(state, data) {
+		state.userInfo = data;
+		uni.setStorageSync("userInfo", data);
+	},
+
+	AUTH_TYPE(state, data) {
+		console.log('######mutations AUTH_TYPE######');
+		console.log('data:');
+		console.log(data);
+
+		data ? uni.hideTabBar() : uni.showTabBar();
+		state.authType = data;
+		console.log('######mutations AUTH_TYPE######');
+	},
+}
+
+const actions = {
+	// 获取用户信息
+	getUserInfo({
+		commit,
+		dispatch,
+		getters,
+		state
+	}, userId) {
+		console.log('######actions getUserInfo begin######');
+
+		return new Promise((resolve, reject) => {
+			//console.log('token:');
+			//console.log(token);
+			console.log('userId:');
+			console.log(userId);
+
+			//token && uni.setStorageSync('token', token);
+
+			http('user.info', {
+				id: userId
+			}).then(res => {
+				console.log('store--user--getUserInfo--res:', res);
+				if (res.code === 200) {
+					let lastLoginStatus = getters.isLogin;
+					
+					commit('userInfo', res.data);
+					commit('isLogin', true);
+					dispatch('showAuthModal', '');
+
+					resolve(res.data)
+				}
+
+			}).catch(e => {
+				reject(e)
+			})
+
+			console.log('######actions getUserInfo end######');
+
+		})
+	},
+	// 登录页面控制
+	showAuthModal({
+		commit
+	}, type = 'accountLogin') {
+		console.log('######actions showAuthPage######');
+		commit('AUTH_TYPE', type);
+	},
+
+	// 登录页面控制
+	showAuthPage({
+		commit
+	}, type = 'accountLogin') {
+		commit('AUTH_TYPE', type);
+	},
+
+	// 退出登录
+	logout({
+		commit,
+		dispatch
+	}) {
+		uni.getStorageSync('token') && http('user.logout');
+		commit('token', "");
+		commit('isLogin', false);
+		commit('userInfo', {});
+
+	},
+
+}
+
+
+export default {
+	state,
+	mutations,
+	actions,
+	getters
+}

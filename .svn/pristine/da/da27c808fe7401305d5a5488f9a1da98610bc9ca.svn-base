@@ -1,0 +1,52 @@
+.cu-form-group .title {
+	min-width: calc(4em + 15px);
+	
+}
+	
+.bind-smscode{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	
+	.bind-smscode-left{
+		flex: 8;
+		display: flex;
+		align-items: center;
+		padding-right: 12rpx;
+	}
+	
+	.bind-smscode-right{
+		//flex: 2;
+		.bind-smscode-btn{
+			// margin-left: 10rpx;
+			// color: #72ACC1;
+			// width: 140rpx;
+			width: 180rpx;
+			font-size: 24rpx;
+		}
+		
+	}
+}
+
+.smscode-text{
+	width:140rpx;
+	color: #72ACC1;
+	text-align: center;
+}
+
+	
+.bind-submit-box{
+	
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 240rpx;
+	
+	.bind-submit-btn{
+		width: 100%;
+		height: 78rpx;
+		color: #FFF;
+		
+	}
+}

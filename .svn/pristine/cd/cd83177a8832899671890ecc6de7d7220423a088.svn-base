@@ -1,0 +1,453 @@
+.bill-wrap{
+	.top-wrap{
+		position: relative;
+		height: 360rpx;
+		background-image: url('/static/images/charge/balance_bg.png');
+		background-size: 100% 360rpx;
+		display: flex;
+		flex-direction: column;
+		
+		.user-message{
+			display: flex;
+			flex-direction: column;
+			padding-top: 20rpx;
+			padding-left: 30rpx;
+			.user-address{
+				color: #FFF;
+				font-size: 32rpx;
+			}
+			.user-number{
+				color: #FFF;
+				padding-top: 12rpx;
+				display: flex;
+				align-items: center;
+				.user-number-label{
+					
+				}
+				.user-number-text{
+					
+				}
+			}
+			.user-location{
+				color: #FFF;
+				padding-top: 12rpx;
+				display: flex;
+				align-items: center;
+				.user-location-icon{
+					height: 33rpx;
+					width: 33rpx;
+					color: #FFF;
+					
+				}
+				.user-location-text{
+					padding-left: 12rpx;
+				}
+			}
+		}
+	}
+	
+	.float-wrap{
+		position: absolute;
+		top: 290rpx;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		.content-wrap{
+			width: 90%;
+			.bill-sum{
+				width: 100%;
+				height: 390rpx;
+				border-radius: 12rpx;
+				background-image: url('/static/images/charge/bill_card.png');
+				background-size: 100% 390rpx;
+				display: flex;
+				flex-direction: column;
+				margin-bottom: 12rpx;
+				
+				.select{
+					display: flex;
+					align-items: center;
+					width: 100%;
+					padding-left: 32rpx;
+					padding-top: 32rpx;
+					.select-year{
+						display: flex;
+						
+						.year-picker{
+							width: 100rpx;
+						}
+						.down-icon{
+						}
+					}
+					.select-month{
+						padding-left: 12rpx;
+						width: 480rpx;
+						.cur {
+							background: #007DFE;
+							border-radius: 23px;
+							border-bottom: 0px;
+							height: 48rpx;
+							line-height: 48rpx;
+							color: #FFF;
+						}
+					}
+				}
+				
+				.sum-line{
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+					padding-top: 32rpx;
+					padding-left: 32rpx;
+					padding-right: 32rpx;
+					.item{
+						width:60%;
+						display: flex;
+						flex-direction: column;
+						.item-amount{
+							font-size: 38rpx;
+							font-weight: 600;
+						}
+						.item-label{
+							padding-top: 8rpx;
+							font-size: 22rpx;
+						}
+					}
+					.item2{
+						width:40%;
+						display: flex;
+						flex-direction: column;
+						.item-amount{
+							font-size: 38rpx;
+							font-weight: 600;
+						}
+						.item-label{
+							padding-top: 8rpx;
+							font-size: 22rpx;
+						}
+					}
+				}
+			}
+			
+			.bill-item{
+				//margin-top: 12rpx;
+				width: 100%;
+				//height: 420rpx;
+				border-radius: 12rpx;
+				background-color: #FFF;
+				display: flex;
+				flex-direction: column;
+				
+				.header{
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-top: 22rpx;
+					padding-left: 22rpx;
+					padding-right: 22rpx;
+					background-color: #EEEEEE;
+					.header-item{
+						width: 40%;
+					}
+					
+					.header-item2{
+						width: 30%;
+					}
+					
+					.header-item-right{
+						width: 30%;
+						text-align: right;
+					}
+				}
+				
+				.item-line{
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 22rpx;
+					.line-item{
+						width: 40%;
+					}
+					.line-item2{
+						width: 30%;
+					}
+					.line-item-right{
+						width: 30%;
+						text-align: right;
+					}
+				}
+				
+				.meter-time-box{
+					margin-left: 32rpx;
+					margin-right: 32rpx;
+					padding-top: 12rpx;
+					padding-bottom: 12rpx;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					.meter-time-item{
+						display: flex;
+						align-items: center;
+						.meter-time-label{
+						}
+						.meter-time-text{
+						}
+					}
+				}
+				
+				.electric-step-box{
+					margin-left: 32rpx;
+					margin-right: 32rpx;
+					display: flex;
+					flex-direction: column;
+					
+					.step-process{
+						width: 100%;
+						padding-top: 32rpx;
+						
+						.process-circle{
+							top: 54rpx;
+							position: absolute;
+							margin-left: 12rpx;
+							width:36rpx;
+							height: 36rpx;
+							background-color: #fff;
+							border-radius: 50%;
+							border: 1px solid #E0E0E0;
+						}
+						
+						.process-number{
+							top: 22rpx;
+							position: absolute;
+							font-weight: bold;
+						}
+						
+						
+						
+					}
+					
+					.step-explain{
+						width: 100%;
+						margin-top: 22rpx;
+						display: flex;
+						justify-content: space-around;
+						align-items: center;
+						
+						.explain-item{
+							width: 33%;
+							display: flex;
+							flex-direction: column;
+							align-items: center;
+							.item-number{
+								font-size: 32rpx;
+								
+							}
+							.item-text{
+								font-size: 24rpx;
+								
+							}
+							
+						}
+						
+						
+						
+						
+					}
+					
+					
+					
+					
+					
+				}
+			}
+			
+			
+			.bill-item2{
+				width: 100%;
+				margin-top: 6rpx;
+				border-radius: 12rpx;
+				background-color: #FFF;
+				display: flex;
+				flex-direction: column;
+				.header{
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-top: 22rpx;
+					padding-left: 22rpx;
+					padding-right: 22rpx;
+					background-color: #EEEEEE;
+					.header-item{
+						width: 25%;
+					}
+					
+					.header-item2{
+						width: 25%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						.header-item-top{
+						}
+						.header-item-bottom{
+						}
+					}
+					
+					.header-item-right{
+						text-align: right;
+						width: 25%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						.header-item-right-top{
+						}
+						.header-item-right-bottom{
+						}
+					}
+				}
+				
+				.item-line{
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 22rpx;
+					.line-item{
+						width: 25%;
+					}
+					.line-item-right{
+						width: 25%;
+						text-align: right;
+					}
+				}
+			}
+			
+			
+			
+			.bill-item3{
+				width: 100%;
+				margin-top: 6rpx;
+				border-radius: 12rpx;
+				background-color: #FFF;
+				display: flex;
+				flex-direction: column;
+				.header{
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					margin-top: 22rpx;
+					padding-left: 22rpx;
+					padding-right: 22rpx;
+					background-color: #EEEEEE;
+					.header-item{
+						width: 20%;
+					}
+					
+					.header-item2{
+						width: 40%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						.header-item-top{
+						}
+						.header-item-bottom{
+						}
+					}
+					
+					.header-item-right{
+						text-align: right;
+						width: 40%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+						.header-item-right-top{
+						}
+						.header-item-right-bottom{
+						}
+					}
+				}
+				
+				.item-line{
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+					padding: 22rpx;
+					.line-item{
+						width: 20%;
+					}
+					.line-item2{
+						width: 40%;
+					}
+					.line-item-right{
+						width: 40%;
+						text-align: right;
+					}
+				}
+			}
+			
+			.divid-line-box{
+				.divid-line{
+					width: 100%;
+					height: 22rpx;
+				}
+			}
+			
+			.bill-function{
+				width: 100%;
+				height: 140rpx;
+				display: flex;
+				justify-content: space-between;
+				.func-use{
+					width: 50%;
+					display: flex;
+					align-items: center;
+					padding-left: 12rpx;
+					background: linear-gradient(-45deg, #D0E9FF 0%, #F7FBFF 100%);
+					.func-icon-box{
+						.func-icon{
+							height: 100rpx;
+							width: 100rpx;
+						}
+					}
+					.func-name-box{
+						display: flex;
+						flex-direction: column;
+						padding-left: 12rpx;
+						.func-name{
+							font-size: 32rpx;
+						}
+						
+						.prompt-text{
+							font-size: 22rpx;
+						}
+					}
+				}
+				
+				.function-charge{
+					width: 50%;
+					display: flex;
+					align-items: center;
+					padding-left: 12rpx;
+					background: linear-gradient(-45deg, #FFEBDD 0%, #FFFCF6 100%);
+					.func-icon-box{
+						.func-icon{
+							height: 100rpx;
+							width: 100rpx;
+						}
+					}
+					.func-name-box{
+						display: flex;
+						flex-direction: column;
+						padding-left: 12rpx;
+						.func-name{
+							font-size: 32rpx;
+						}
+						
+						.prompt-text{
+							font-size: 22rpx;
+						}
+					}
+				}
+			}
+		}
+	}
+}

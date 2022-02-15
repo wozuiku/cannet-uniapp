@@ -1,0 +1,58 @@
+.bind-wrap{
+	display: flex;
+	flex-direction: column;
+	.prompt-text{
+		padding-left: 32rpx;
+		padding-right: 32rpx;
+		padding-top: 22rpx;
+		padding-bottom: 22rpx;
+	}
+	
+	.smscode-btn{
+		width: 180rpx;
+		font-size: 24rpx;
+	}
+	
+	.bind-btn-box{
+		margin-top: 62rpx;
+		margin-left: 32rpx;
+		margin-right: 32rpx;
+		.bind-btn{
+			font-size: 36rpx;
+		}
+	}
+	
+	.room-item{
+		display: flex;
+		flex-direction: column;
+		padding: 22rpx;
+		.room-name{
+			display: flex;
+			align-items: center;
+			font-size: 32rpx;
+			.room-name-label{
+				
+			}
+			.room-name-text{
+				
+			}
+		}
+		
+		.room-num{
+			display: flex;
+			align-items: center;
+			padding-top: 12rpx;
+			font-size: 28rpx;
+			.room-num-label{
+				
+			}
+			
+			.room-num-text{
+				
+			}
+			
+		}
+		
+	}
+	
+}

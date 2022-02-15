@@ -1,0 +1,33 @@
+export default {
+	data(){
+		return{
+			balanceItem: {},
+		}
+	},
+	
+	onLoad(options){
+		this.balanceItem=  JSON.parse(decodeURIComponent(options.item));
+		console.log('onLoad options.item:', options.item);
+		console.log('onLoad balanceItem:', this.balanceItem);
+	},
+	
+	methods:{
+		charge_bill(){
+			let userType = this.balanceItem.userType
+			console.log('userType :', userType);
+			//工业账单
+			if(userType == 0){
+				uni.navigateTo({
+					url: '/pages/charge/bill/industry/index?balanceItem=' + encodeURIComponent(JSON.stringify(this.balanceItem))
+				});
+			//居民账单
+			}else if(userType == 1){
+				uni.navigateTo({
+					url: '/pages/charge/bill/resident/index?balanceItem=' + encodeURIComponent(JSON.stringify(this.balanceItem))
+				});
+			}
+			
+			
+		},
+	}
+}

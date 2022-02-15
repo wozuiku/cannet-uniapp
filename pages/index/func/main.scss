@@ -1,0 +1,122 @@
+.func-wrap {
+		height: calc(100vh);
+		/* #ifdef H5 */
+		height: calc(100vh - var(--window-top));
+		/* #endif */
+		display: flex;
+		flex-direction: column;
+
+
+	.search-box {
+		padding-left: 32rpx;
+		padding-right: 32rpx;
+		padding-top: 22rpx;
+		padding-bottom: 22rpx;
+		background-color: #4EB5B2;
+		
+		
+		.search-inner {
+			background-color: rgb(250, 250, 250);
+			border-radius: 100rpx;
+			display: flex;
+			//justify-content: center;
+			align-items: center;
+			padding: 10rpx 16rpx;
+		}
+		
+		.search-text {
+			width:100%;
+			font-size: 26rpx;
+			color: $u-tips-color;
+			margin-left: 10rpx;
+		}
+	}
+
+	.common-wrap{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: 90rpx;
+		background-color: #fff;
+		.common-left{
+			width: 160rpx;
+			.common-title{
+				font-size: 31rpx;
+				font-weight: 900;
+				text-align: center;
+			}
+		}
+		
+		.common-right{
+			flex-grow: 1;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			.func-icons{
+				display: flex;
+				align-items: center;
+				.func-icon-item{
+					width: 62rpx;
+					height: 62rpx;
+					padding: 8rpx;
+				}
+			}
+			
+			.func-edit{
+				padding-right: 36rpx;
+				.func-edit-btn{
+					width: 120rpx;
+					line-height: 48rpx;
+					font-size: 26rpx;
+					border-radius: 28rpx;
+					background:#4EB5B2;
+					color: #fff;
+				}
+				
+			}
+		}
+	}
+
+	.common-edit-wrap{
+		
+		.common-edit-bar{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 22rpx 32rpx;
+			background-color: #4EB5B2;
+			.common-edit-cancel{
+				color: #FFF;
+			}
+			.common-edit-commit{
+				color: #FFF;
+			}
+		}
+		
+		.common-edit-title{
+			display: flex;
+			align-items: center;
+			padding: 16rpx 26rpx;
+			background-color: #FFF;
+			.common-edit-titleText{
+				font-size: 32rpx;
+			}
+			
+			.common-edit-subTitleText{
+				padding-left: 22rpx;
+				font-size: 22rpx;
+			}
+		}
+		
+		.common-edit-func-box{
+			background-color: #FFF;
+		}
+	}
+	
+	.nav-menu{
+		overflow: auto;
+		height: 800rpx;
+		
+	}
+}

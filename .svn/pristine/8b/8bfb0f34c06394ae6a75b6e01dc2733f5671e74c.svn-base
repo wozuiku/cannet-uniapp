@@ -1,0 +1,333 @@
+<template>
+	<view class="bill-wrap">
+		<view class="top-wrap">
+			<cu-custom :isBack="true" bgColor="bg-gradual-blue">
+				<block slot="backText">电费账单</block>
+				<block slot="content"></block>
+			</cu-custom>
+			<view class="user-message">
+				<view class="user-address">{{balanceItem.userName}}</view>
+				<view class="user-number">
+					<view class="user-number-label">用户号：</view>
+					<view class="user-number-text">{{balanceItem.roomName}}</view>
+				</view>
+				<view class="user-location">
+					<image class="user-location-icon" src="/static/images/charge/bill_location.png"></image>
+					<view class="user-location-text">{{balanceItem.userAddress}}</view>
+				</view>
+			</view>
+		</view>
+		<view class="float-wrap">
+			<view class="content-wrap">
+				<view class="month-sum">
+					<view class="select">
+						<view class="select-year">
+							<view class="year-picker">
+								<picker @change="PickerChange" :value="index" :range="picker">
+									<view class="picker">
+										{{index>-1?picker[index]:'2022年'}}
+									</view>
+								</picker>
+							</view>
+							<view class="down-icon">
+								<text class="cuIcon-triangledownfill lg"></text>
+							</view>
+						</view>
+
+						<view class="select-month">
+							1月
+						</view>
+					</view>
+
+					<view class="sum-line">
+						<view class="item">
+							<view class="item-amount">
+								{{billList.totalBillElectric}}
+							</view>
+							<view class="item-label text-gray">
+								本月结算电量(kWh)
+							</view>
+						</view>
+						<view class="item">
+							<view class="item-amount">
+								{{billList.totalPayableMoney}}
+							</view>
+							<view class="item-label text-gray">
+								本月结算金额(元)
+							</view>
+						</view>
+					</view>
+					<view class="sum-line">
+						<view class="item">
+							<view class="item-amount">
+								{{billList.totalPaidMoney}}
+							</view>
+							<view class="item-label text-gray">
+								本月已缴金额(元)
+							</view>
+						</view>
+						<view class="item">
+							<view class="item-amount">
+								{{billList.totalUnpaidMoney}}
+							</view>
+							<view class="item-label text-gray">
+								本月未缴金额(元)
+							</view>
+						</view>
+					</view>
+				</view>
+
+
+				<block v-for="(billItem, billIndex) in billList.detailList">
+					<view class="meter-sum">
+						<view class="header solid-bottom">
+							<view class="thistime-meter">
+								<view class="meter-label text-gray">
+									上次抄表：
+								</view>
+								<view class="meter-text text-gray">
+									{{billItem.lastTime}}
+								</view>
+							</view>
+
+							<view class="lasttime-meter">
+								<view class="meter-label text-gray">
+									本次抄表：
+								</view>
+								<view class="meter-text text-gray">
+									{{billItem.thisTime}}
+								</view>
+							</view>
+						</view>
+
+						<view class="sum-line">
+							<view class="item">
+								<view class="item-amount">
+									17820
+								</view>
+								<view class="item-label text-gray">
+									本月结算电量(kWh)
+								</view>
+							</view>
+							<view class="item">
+								<view class="item-amount">
+									14584.84
+								</view>
+								<view class="item-label text-gray">
+									本月结算金额(元)
+								</view>
+							</view>
+						</view>
+
+						<view class="sum-line">
+							<view class="item">
+								<view class="item-amount">
+									100
+								</view>
+								<view class="item-label text-gray">
+									本月已缴金额(元)
+								</view>
+							</view>
+							<view class="item">
+								<view class="item-amount">
+									14584.84
+								</view>
+								<view class="item-label text-gray">
+									本月未缴金额(元)
+								</view>
+							</view>
+						</view>
+					</view>
+
+
+					<view class="meter-detail">
+						<view class="header1">
+							<view class="header-item">
+								资产编号
+							</view>
+							<view class="header-item">
+								倍率
+							</view>
+							<view class="header-item-right">
+								无功变损(kvarh)
+							</view>
+						</view>
+						<view class="header1-content">
+							<view class="content-item">
+								123456
+							</view>
+							<view class="content-item">
+								15
+							</view>
+							<view class="content-item-right">
+								782
+							</view>
+						</view>
+
+						<view class="header2 solid-top solid-bottom">
+							<view class="header2-item text-gray">
+								
+							</view>
+							<view class="header2-item text-gray">
+								<view class="header-item-top">单价</view>
+								<view class="header-item-bottom">(元)</view>
+							</view>
+							<view class="header2-item text-gray">
+								<view class="header-item-top">结算电量</view>
+								<view class="header-item-bottom">(kWh)</view>
+							</view>
+							<view class="header2-item text-gray">
+								<view class="header-item-top">有功变损</view>
+								<view class="header-item-bottom">(kWh)</view>
+							</view>
+							<view class="header2-item-right text-gray">
+								<view class="header-item-top">金额</view>
+								<view class="header-item-bottom">(元)</view>
+							</view>
+						</view>
+
+						<view class="header2-content text-gray">
+							<view class="content-item">总</view>
+							<view class="content-item">-</view>
+							<view class="content-item">12313</view>
+							<view class="content-item">404</view>
+							<view class="content-item-right">404</view>
+						</view>
+						<view class="header2-content text-gray">
+							<view class="content-item">尖</view>
+							<view class="content-item">1.254</view>
+							<view class="content-item">541</view>
+							<view class="content-item">-</view>
+							<view class="content-item-right">678.41</view>
+						</view>
+						<view class="header2-content text-gray">
+							<view class="content-item">峰</view>
+							<view class="content-item">-</view>
+							<view class="content-item">12313</view>
+							<view class="content-item">404</view>
+							<view class="content-item-right">404</view>
+						</view>
+						<view class="header2-content text-gray">
+							<view class="content-item">平</view>
+							<view class="content-item">-</view>
+							<view class="content-item">12313</view>
+							<view class="content-item">404</view>
+							<view class="content-item-right">404</view>
+						</view>
+						<view class="header2-content text-gray">
+							<view class="content-item">谷</view>
+							<view class="content-item">-</view>
+							<view class="content-item">12313</view>
+							<view class="content-item">404</view>
+							<view class="content-item-right">404</view>
+						</view>
+						<view class="header2-content text-gray">
+							<view class="content-item">无功Q1</view>
+							<view class="content-item">-</view>
+							<view class="content-item">12313</view>
+							<view class="content-item">404</view>
+							<view class="content-item-right">404</view>
+						</view>
+						<view class="header2-content text-gray">
+							<view class="content-item">无功Q2</view>
+							<view class="content-item">-</view>
+							<view class="content-item">12313</view>
+							<view class="content-item">404</view>
+							<view class="content-item-right">404</view>
+						</view>
+						<view class="header2-content text-gray">
+							<view class="content-item">容量电费</view>
+							<view class="content-item">-</view>
+							<view class="content-item">12313</view>
+							<view class="content-item">404</view>
+							<view class="content-item-right">404</view>
+						</view>
+						<view class="header2-content text-gray">
+							<view class="content-item">需量电费</view>
+							<view class="content-item">-</view>
+							<view class="content-item">12313</view>
+							<view class="content-item">404</view>
+							<view class="content-item-right">404</view>
+						</view>
+						<view class="header2-content text-gray">
+							<view class="content-item">价差调整</view>
+							<view class="content-item">-</view>
+							<view class="content-item">12313</view>
+							<view class="content-item">404</view>
+							<view class="content-item-right">404</view>
+						</view>
+						<view class="header2-content text-gray">
+							<view class="content-item">调整电费</view>
+							<view class="content-item">-</view>
+							<view class="content-item">12313</view>
+							<view class="content-item">404</view>
+							<view class="content-item-right">404</view>
+						</view>
+						<view class="header2-content text-gray">
+							<view class="content-item-tail">滞纳金</view>
+							<view class="content-item-right">0</view>
+						</view>
+						<view class="header2-content text-gray">
+							<view class="content-item-tail">上次钱包余额</view>
+							<view class="content-item-right">0</view>
+						</view>
+						<view class="header2-content text-gray">
+							<view class="content-item-tail">本次钱包余额</view>
+							<view class="content-item-right">0</view>
+						</view>
+
+						<view class="header3 solid-top solid-bottom text-gray">
+							<view class="header3-item">类别</view>
+							<view class="header3-item">上次/本次(kWh)</view>
+							<view class="header3-item-right">抄见电量(kWh)</view>
+						</view>
+
+						<view class="header3-content text-gray">
+							<view class="content-item">有功(总)</view>
+							<view class="content-item">1461.59/1588.92</view>
+							<view class="content-item-right">17312</view>
+						</view>
+
+						<view class="header3-content text-gray">
+							<view class="content-item">有功(尖)</view>
+							<view class="content-item">1461.59/1588.92</view>
+							<view class="content-item-right">17312</view>
+						</view>
+
+						<view class="header3-content text-gray">
+							<view class="content-item">有功(峰)</view>
+							<view class="content-item">1461.59/1588.92</view>
+							<view class="content-item-right">17312</view>
+						</view>
+
+						<view class="header3-content text-gray">
+							<view class="content-item">有功(平)</view>
+							<view class="content-item">1461.59/1588.92</view>
+							<view class="content-item-right">17312</view>
+						</view>
+						<view class="header3-content text-gray">
+							<view class="content-item">有功(谷)</view>
+							<view class="content-item">1461.59/1588.92</view>
+							<view class="content-item-right">17312</view>
+						</view>
+					</view>
+
+
+					<image class="divid-line" src="/static/images/charge/bill_divid.png"></image>
+
+				</block>
+
+
+			</view>
+		</view>
+	</view>
+</template>
+
+<script>
+	import Main from './main'
+	export default Main
+</script>
+
+<style lang="scss" scoped>
+	@import "./main.scss"
+</style>

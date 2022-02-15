@@ -1,0 +1,421 @@
+{
+	"easycom": {
+		"^u-(.*)": "@/uni_modules/uview-ui/components/u-$1/u-$1.vue",
+		"^cannet-(.*)": "@/components/cannet-$1/cannet-$1.vue"
+	},
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	//判断是否登录
+	{
+	    "path" : "pages/auth/islogin",
+	    "style" :                                                                                    
+	    {
+	        "navigationBarTitleText": "",
+	        "enablePullDownRefresh": false
+	    }
+	    
+	},
+		//登录
+		{
+			"path": "pages/auth/index",
+			//"aliasPath": "/", //对于h5端你必须在首页加上aliasPath并设置为/
+			"style": {
+				"navigationBarTitleText": "登录",
+				//"navigationBarTextStyle": "white",
+				//"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			},
+			"meta": {
+				"auth": false, //需要登录
+				"async": true, //是否同步
+				"title": "登录", //标题
+				"group": "user" //分组
+			}
+		},
+		//首页
+		{
+			"path": "pages/index/index/index",
+			"style": {
+				"navigationBarTitleText": "首页",
+				"navigationStyle": "custom"
+			},
+			"meta": {
+				"auth": false, //需要登录
+				"async": true, //是否同步
+				"group": "index" //分组
+			}
+		},
+		
+		//功能
+		// {
+		// 	"path": "pages/index/func/index",
+		// 	"style": {
+		// 		"navigationBarTitleText": "功能"
+		// 	},
+		// 	"meta": {
+		// 		"auth": false,
+		// 		"async": true,
+		// 		"title": "功能",
+		// 		"group": "index"
+		// 	}
+		// },
+		
+		//我的
+		{
+			"path": "pages/index/user/index",
+			"style": {
+				"navigationBarTitleText": " ",
+				"navigationStyle": "custom"
+			},
+			"meta": {
+				"auth": false,
+				"async": true,
+				"title": "我的",
+				"group": "index"
+			}
+		},
+		
+		//个人信息
+		{
+			"path": "pages/user/info/index",
+			"style": {
+				"navigationBarTitleText": "个人信息"
+			},
+			"meta": {
+				"auth": true,
+				"async": true,
+				"title": "个人信息",
+				"group": "user"
+			}
+		},
+		
+		//绑定用户
+		{
+			"path": "pages/user/bind/index/index",
+			"style": {
+				// "navigationBarTitleText": "绑定用户",
+				// "navigationStyle": "custom"
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+			
+		},
+		
+		//绑定用户
+		{
+			"path": "pages/user/bind/method/index",
+			"style": {
+				// "navigationBarTitleText": "绑定用户",
+				// "navigationStyle": "custom"
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+			
+		},
+		
+		//绑定用户
+		{
+			"path": "pages/user/bind/bind/index",
+			"style": {
+				// "navigationBarTitleText": "绑定用户",
+				// "navigationStyle": "custom"
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+				
+			}
+			
+		},
+		
+		//绑定用户
+		{
+			"path": "pages/user/bind/bind/result",
+			"style": {
+				"navigationBarTitleText": "绑定结果",
+				"navigationStyle": "custom"
+			}
+			
+		},
+		
+		//房间管理
+		{
+			"path": "pages/user/room/index/index",
+			"style": {
+				"navigationBarTitleText": "房间管理"
+			},
+			"meta": {
+				"auth": true,
+				"async": true,
+				"title": "房间管理",
+				"group": "user"
+			}
+		},
+		
+		//房间功能
+		{
+			"path": "pages/user/room/action/index",
+			"style": {
+				"navigationBarTitleText": "房间功能"
+			},
+			"meta": {
+				"auth": true,
+				"async": true,
+				"title": "房间功能",
+				"group": "user"
+			}
+		},
+		
+		//审批分户
+		{
+			"path": "pages/user/room/approve/index",
+			"style": {
+				"navigationBarTitleText": "审批分户"
+			},
+			"meta": {
+				"auth": true,
+				"async": true,
+				"title": "审批分户",
+				"group": "user"
+			}
+		},
+		
+		//房间账户
+		{
+			"path": "pages/user/room/account/index",
+			"style": {
+				"navigationBarTitleText": "房间账户"
+			},
+			"meta": {
+				"auth": true,
+				"async": true,
+				"title": "房间账户",
+				"group": "user"
+			}
+		},
+		
+		
+		//房间账户信息
+		{
+			"path": "pages/user/room/account/info",
+			"style": {
+				"navigationBarTitleText": "房间账户信息"
+			},
+			"meta": {
+				"auth": true,
+				"async": true,
+				"title": "房间账户信息",
+				"group": "user"
+			}
+		},
+		
+		//
+		{
+			"path": "pages/user/room/branch/index",
+			"style": {
+				"navigationBarTitleText": "分户管理"
+			},
+			"meta": {
+				"auth": true,
+				"async": true,
+				"title": "分户管理",
+				"group": "user"
+			}
+		},
+		
+		
+		{
+			"path": "pages/user/address/list",
+			"style": {
+				"navigationBarTitleText": "常用地址"
+			},
+			"meta": {
+				"auth": true,
+				"async": true,
+				"title": "常用地址",
+				"group": "用户"
+			}
+		},
+		
+		
+		
+		{
+			"path": "pages/charge/pay/index/index",
+			"name": "pay",
+			"style": {
+				"navigationBarTitleText": "交电费"
+			}
+		},
+		
+		{
+			"path": "pages/charge/balance/index/index",
+			"name": "balance",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		},
+		
+		
+		{
+			"path": "pages/public/404",
+			"name": "404",
+			"style": {
+				"navigationBarTitleText": "页面不存在"
+			}
+		},
+		
+		
+		{
+			"path": "pages/public/richtext",
+			"name": "richtext",
+			"style": {
+				"navigationBarTitleText": "richtext"
+			}
+		},
+		
+		{
+			"path": "pages/charge/bill/index/index",
+			"name": "bill",
+			"style": {
+				"navigationBarTitleText": "用户账单",
+				"navigationStyle": "custom"
+			}
+		},
+		
+		//工业账单
+		{
+		    "path" : "pages/charge/bill/industry/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		},
+		
+		//居民账单
+		{
+		    "path" : "pages/charge/bill/resident/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		}
+        ,{
+            "path" : "pages/charge/bill/residentbill",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/charge/bill/electricityusage",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		
+        ,{//by ----luzq
+            "path" : "pages/charge/pay/topay",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "充值",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+            }
+            
+        },
+		// 用能分析
+		{
+		"path": "pages/charge/enalysis/index/index",
+			"style": {
+			"navigationBarTitleText": ""
+			}
+		}
+       
+        ,{
+            "path" : "pages/charge/pay/payhistory/payhistory",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "充值记录",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/charge/pay/payhistory/paydetail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "订单详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/charge/bill/electricityusage/electricityusage",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "用电情况",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/charge/pay/payResult",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "支付详情",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	// "globalStyle": {
+	// 	"navigationBarTextStyle": "black",
+	// 	"navigationBarTitleText": "uni-app",
+	// 	"navigationBarBackgroundColor": "#F8F8F8",
+	// 	"backgroundColor": "#F8F8F8"
+	// },
+	"globalStyle": {
+		"mp-alipay": {
+			/* 支付宝小程序特有相关 */
+			"transparentTitle": "always",
+			"allowsBounceVertical": "NO"
+		},
+		"H5":{
+			"titleNView":false
+		},
+		"navigationBarBackgroundColor": "#0081ff",
+		"navigationBarTitleText": "综合能源",
+		"navigationStyle": "custom",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"color": "#333",
+		"selectedColor": "#0081FC",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"list": [{
+				"pagePath": "pages/index/index/index",
+				"text": "首页",
+				"iconPath": "static/images/tabbar/tabbar_index.png",
+				"selectedIconPath": "/static/images/tabbar/tabbar_index_selected.png"
+			},
+			// {
+			// 	"pagePath": "pages/index/func/index",
+			// 	"text": "功能",
+			// 	"iconPath": "static/images/tabbar/tabbar_func.png",
+			// 	"selectedIconPath": "/static/images/tabbar/tabbar_func_selected.png"
+			// },
+			{
+				"pagePath": "pages/index/user/index",
+				"text": "我的",
+				"iconPath": "static/images/tabbar/tabbar_user.png",
+				"selectedIconPath": "/static/images/tabbar/tabbar_user_selected.png"
+			}
+		]
+	}
+}

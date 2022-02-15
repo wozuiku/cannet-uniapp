@@ -1,0 +1,160 @@
+.pay-wrap{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+	
+	.pay-content-box{
+		display: flex;
+		flex-direction: column;
+		margin-top: 120rpx;
+		margin-left: 38rpx;
+		margin-right: 38rpx;
+		background-color: #FFF;
+		border-radius: 18rpx 18rpx 0rpx 0rpx;
+		.balance-box{
+			display: flex;
+			padding: 68rpx 28rpx 28rpx 28rpx;
+			.balance-label{
+				flex:3;
+				color: #aaaaaa;
+				
+			}
+			.balance-value{
+				flex:7;
+				font-size: 36rpx;
+				font-weight: 600;
+			}
+		}
+		
+		.pay-line{
+			padding-left:28rpx;
+			padding-right:28rpx;
+		}
+		
+		.payname-box{
+			display: flex;
+			padding-left: 28rpx;
+			padding-top: 28rpx;
+			.payname-label{
+				flex:3;
+				color: #aaaaaa;
+			}
+			.payname-value{
+				flex:7
+			}
+		}
+		
+		.payaccount-box{
+			display: flex;
+			padding-left: 28rpx;
+			padding-top: 28rpx;
+			.payaccount-label{
+				flex:3;
+				color: #aaaaaa;
+			}
+			.payaccount-value{
+				flex:7
+			}
+		}
+		
+		.payacompany-box{
+			display: flex;
+			padding-left: 28rpx;
+			padding-top: 28rpx;
+			.payacompany-label{
+				flex:3;
+				color: #aaaaaa;
+			}
+			.payacompany-value{
+				flex:7;
+			}
+		}
+		
+		.address-box{
+			display: flex;
+			padding-left: 28rpx;
+			padding-top: 28rpx;
+			.address-label{
+				flex:3;
+				color: #aaaaaa;
+			}
+			.address-value{
+				flex:7;
+			}
+		}
+		
+		.pay-amount-label{
+			padding-left: 28rpx;
+			padding-top: 38rpx;
+			font-weight: 600;
+		}
+		
+		.pay-amount-box{
+			display: flex;
+			align-items: center;
+			padding-left: 28rpx;
+			padding-top: 18rpx;
+			padding-bottom: 12rpx;
+			
+			.pay-amount-rmb{
+				font-size: 46rpx;
+				font-weight: 500;
+			}
+			.pay-amount-value{
+				padding-left: 12rpx;
+				font-size: 56rpx;
+				font-weight: 500;
+			}
+		}
+		
+		.pay-tag-box{
+			display: flex;
+			justify-content: space-around;
+			padding-left: 18rpx;
+			padding-right: 18rpx;
+			padding-top: 38rpx;
+			padding-bottom: 38rpx;
+			.pay-tag-item{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 140rpx;
+				height: 54rpx;
+				//color: #FFF;
+				background-color: #F1F3F9;
+			}
+			
+			.pay-tag-item-selected{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 140rpx;
+				height: 54rpx;
+				color: #E19060;
+				background-color: #FFE6CE;
+			}
+		}
+	}
+	
+	.pay-btn-box{
+		margin-top: 80rpx;
+		padding-left: 42rpx;
+		padding-right: 42rpx;
+		height: 80rpx;
+		.pay-submit-btn{
+			color: #FFF;
+			font-size: 32rpx;
+			line-height: 80rpx;
+		}
+	}
+	
+	.pay-record-box{
+		margin-top: 36rpx;
+		padding-left: 42rpx;
+		padding-right: 42rpx;
+		.pay-record-btn{
+			color: #0285F9;
+			font-size: 28rpx;
+		}
+	}
+}

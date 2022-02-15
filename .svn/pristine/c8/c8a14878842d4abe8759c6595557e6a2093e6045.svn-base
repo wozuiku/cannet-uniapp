@@ -1,0 +1,23 @@
+.bind-room-nobind-box{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	.bind-room-notice{
+		width: 100%;
+		padding: 60rpx;
+		font-size: 32rpx;
+		text-align: center;
+	}
+	
+	.bind-room-tobind{
+		width: 90%;
+		padding: 12rpx;
+		line-height: 58rpx;
+		font-size: 32rpx;
+	}
+	
+}
+
+

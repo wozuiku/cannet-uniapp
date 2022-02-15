@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "echarts": "^5.2.2",
+    "jweixin-module": "^1.6.0",
+    "mpvue-echarts": "^0.3.2",
+    "uni-read-pages": "^1.0.5",
+    "vconsole": "^3.10.1"
+  }
+}

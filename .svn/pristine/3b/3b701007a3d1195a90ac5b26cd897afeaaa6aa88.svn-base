@@ -1,0 +1,11 @@
+<template>
+</template>
+
+<script>
+	import Main from './main'
+	export default Main
+</script>
+
+<style lang="scss" scoped>
+	@import "./main.scss"
+</style>

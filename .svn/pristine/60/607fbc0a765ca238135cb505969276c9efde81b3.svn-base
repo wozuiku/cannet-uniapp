@@ -1,0 +1,18 @@
+import test from '@/uni_modules/uview-ui/libs/function/test.js'
+
+export default {
+	pay: {
+		//充值金额
+		payAmount: [{
+				required: true,
+				message: '充值金额不能为空',
+			},
+			{
+				validator: (rule, value, callback) => {
+					return test.amount(value);
+				},
+				message: '充值金额不符合规则',
+			}
+		],
+	}
+}

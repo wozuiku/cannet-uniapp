@@ -1,0 +1,25 @@
+.account-wrap{
+	
+	.account-item{
+		
+	}
+	
+	.account-btn-box{
+		display: flex;
+		align-items: center;
+		
+		
+		.allow-pay-btn{
+			height: 54rpx;
+		}
+		
+		.unbind-btn-box{
+			padding-left: 18rpx;
+			.unbind-btn{
+				height: 54rpx;
+			}
+			
+		}
+		
+	}
+}

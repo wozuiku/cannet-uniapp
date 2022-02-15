@@ -1,0 +1,52 @@
+<template>
+	<view class="bind-wrap">
+		<!-- <cu-custom :isBack="true" bgColor="bg-white" style="color: #000000;"><block slot="backText" >添加绑定新用户</block><block slot="content"></block></cu-custom> -->
+		<cu-custom :isBack="true" bgColor="bg-gradual-blue" style="color: #000000;"><block slot="backText" ></block><block slot="content">添加绑定新用户</block></cu-custom>
+		<view class="prompt-text text-gray">
+			确认用户信息输入手机号验证码点击“绑定用户”按钮
+		</view>
+		<form>
+			<view class="cu-form-group">
+				<view class="title">用户号</view>
+				<input v-model = 'form.data.roomName' placeholder="请输入用户号" :disabled = '!userInput'></input>
+				<button v-if = 'userInput' class='cu-btn bg-blue' @tap="search">查询</button>
+			</view>
+			<view class="cu-form-group">
+				<view class="title">用户名</view>
+				<input v-model = 'form.data.userName' placeholder="" disabled ></input>
+			</view>
+			<view class="cu-form-group">
+				<view class="title">用电地址</view>
+				<input v-model = 'form.data.userAddress' placeholder="" disabled></input>
+			</view>
+			<view class="cu-form-group">
+				<view class="title">业主手机</view>
+				<input v-model = 'form.data.encryptPhoneNumber' placeholder="" disabled></input>
+			</view>
+			<view class="cu-form-group">
+				<view class="title">验证码</view>
+				<input v-model = 'form.data.smsCode' placeholder="请输入验证码" type="number"></input>
+				<button class='cu-btn bg-blue smscode-btn' :disabled="disabledCode" @tap="getSmsCode('5')">{{codeText}}</button>
+			</view>
+		</form>
+		<view class="bind-btn-box">
+			<button class="bg-gradual-blue bind-btn shadow" @click="bindSubmit">绑定用户</button>
+		</view>
+		
+	</view>
+</template>
+
+<script>
+	import Main from './main.js'
+	export default Main
+</script>
+
+<style lang="scss" scoped>
+	@import "./main.scss"
+</style>
+
+<style>
+	.cu-form-group .title {
+		min-width: calc(4em + 15px);
+	}
+</style>

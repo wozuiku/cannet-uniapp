@@ -1,0 +1,302 @@
+.top-wrap{
+	position: relative;
+	height: 560rpx;
+	background-image: url('/static/images/index/home_bg.png');
+	background-size: 100% 560rpx;
+	display: flex;
+	flex-direction: column;
+	.topbar{
+		display: flex;
+		justify-content: space-between;
+		width:100%;
+		color: #fff;
+		padding: 20rpx 20rpx;
+		font-size: 28rpx;
+		line-height: 45rpx;
+		
+		.topbar-tenant{
+			padding-left: 16rpx;
+			width:420rpx;
+			display: flex;
+			.select-value{
+			}
+			.select-icon{
+				padding-left: 12rpx;
+			}
+		}
+		
+		.topbar-right{
+			display: flex;
+			justify-content: flex-end;
+			
+			
+			.topbar-message{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				
+				.topbar-message-text{
+					font-size: 22rpx;
+				}
+			}
+			
+			.topbar-scan{
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				padding-left: 26rpx;
+				.topbar-scan-text{
+					font-size: 22rpx;
+				}
+			}
+		}
+	}
+	
+	.balance{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width:100%;
+		color: #fff;
+		
+		.account_balance{
+			display: flex;
+			//justify-content: center;
+			.left-arrow{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding-left: 12rpx;
+				width: 80rpx;
+				//height: 60rpx;
+				.left-arrow-image{
+					width: 30rpx;
+					height: 30rpx;
+				}
+			}
+			.balance-items{
+				display: flex;
+				padding-top: 22rpx;
+				.balance-item{
+					display: flex;
+					flex-direction: column;
+					padding-left: 28rpx;
+					padding-right: 28rpx;
+					
+					width: 300rpx;
+					
+					.account-address{
+						display: flex;
+						align-items: center;
+						.account-address-text{
+							font-size: 35rpx;
+							line-height: 48rpx;
+						}
+						
+						.account-address-arrow{
+							padding-left: 12rpx;
+						}
+					}
+					
+					.balance-amount{
+						padding-top: 12rpx;
+						display: flex;
+						align-items: baseline;
+						.balance-amount-label{
+						}
+						.balance-amount-integer{
+							padding-left: 12rpx;
+							font-size: 33rpx;
+						}
+						.balance-amount-decimal{
+							//align-self: baseline;
+						}
+					}
+					
+					.month-amount{
+						
+						display: flex;
+						align-items: baseline;
+						.month-amount-label{
+							
+						}
+						.month-amount-integer{
+							padding-left: 12rpx;
+							font-size: 33rpx;
+						}
+						
+						.month-amount-decimal{
+							
+						}
+						
+					}
+					
+					.charge-btn{
+						padding-top: 22rpx;
+						.charge-btn-text{
+							font-size: 26rpx;
+						}
+					}
+				}
+				
+				.balance-line{
+					border:  solid rgba(255, 255, 255, 0.1);
+				}
+				
+			}
+			
+			.right-arrow{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				padding-right: 12rpx;
+				width: 80rpx;
+				//height: 60rpx;
+				.right-arrow-image{
+					width: 30rpx;
+					height: 30rpx;
+				}
+			}
+			
+			
+		}
+		
+		.balance_content{
+			padding-left: 140rpx;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			
+			width:380rpx;
+			height: 160rpx;
+			
+			.balance_account{
+			}
+			
+			.balance_currency{
+				font-size: 20rpx;
+			}
+			
+			.balance_amount{
+				font-size: 40rpx;
+				
+			}
+			
+			.balance_day{
+				display: flex;
+				align-items: flex-end;
+				font-size: 20rpx;
+				
+				.balance_day_num{
+					padding-left: 16rpx;
+					padding-right: 16rpx;
+					font-size: 32rpx;
+				}
+			}
+		}
+	}
+}
+
+.float-wrap{
+	position: absolute;
+	top: 400rpx;
+	width: 100%;
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	.content-wrap{
+		width: 90%;
+		.function{
+			.func-image{
+				width: 88rpx;
+				height: 88rpx;
+			}
+		}
+		
+		.notice{
+			margin-top: 22rpx;
+			display: flex;
+			width: 100%;
+			height: 80rpx;
+			//justify-content: space-between;
+			
+			
+			.notice_left{
+				width: 60rpx;
+				display: flex;
+				align-items: center;
+				.notice_icon{
+					padding-left: 20rpx;
+					
+					
+				}
+				
+			}
+			
+			.notice_right{
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				
+				.notice_text{
+					width: 480rpx;
+					padding-left: 20rpx;
+				}
+				
+				.notice_more{
+					padding-right: 20rpx;
+					font-size: 26rpx;
+				}
+			}
+		}
+		
+		.ad{
+			margin-top: 22rpx;
+			.ad-title{
+				display: flex;
+				justify-content: space-between;
+				
+				.ad-title-left{
+					font-weight:900;
+					color:#5D5D5D;
+					font-size:30rpx;
+				}
+				
+				.ad-title-right{
+					color: #C9C9CB;
+					font-size: 26rpx;
+					
+				}
+				
+			}
+			.ad-swiper{
+				
+				margin-top: 20rpx;
+				
+			}
+		}
+		
+		
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+.grid-text {
+	font-size: 28rpx;
+	margin-top: 4rpx;
+	color: $u-type-info;
+}
+
+

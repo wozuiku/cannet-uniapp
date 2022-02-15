@@ -1,0 +1,48 @@
+<template>
+	<view class="user-wrap">
+		<view class="info-wrap">
+			<view v-if="!isLogin">
+				<view class="user_info">
+					<view class="user-image">
+						<u-avatar src="" size="120"></u-avatar>
+					</view>
+					<text class="user-name">点击登录/注册</text>
+				</view>
+			</view>
+
+			<view v-if="isLogin">
+				<view class="user-info">
+					<view class="user-image">
+						<u-avatar src="" size="120"></u-avatar>
+					</view>
+					<text class="user-name">{{userInfo.fullName}}</text>
+				</view>
+			</view>
+		</view>
+
+		<view class="func-wrap">
+			<view class="func-items">
+				<u-cell-group :border="false">
+					<u-cell-item icon="account" title="房间管理" @tap="jump"></u-cell-item>
+					<u-cell-item icon="photo" title="账户安全"></u-cell-item>
+					<u-cell-item icon="coupon" title="常见问题"></u-cell-item>
+					<u-cell-item icon="heart" title="我有话说"></u-cell-item>
+				</u-cell-group>
+			</view>
+		</view>
+		
+		<view class="logout-btn-box">
+			<button class="bg-gradual-blue logout-btn shadow" @click="logout">退出登录</button>
+		</view>
+		
+	</view>
+</template>
+
+<script>
+	import Main from "./main";
+	export default Main;
+</script>
+
+<style lang="scss" scoped>
+	@import './main.scss'
+</style>
