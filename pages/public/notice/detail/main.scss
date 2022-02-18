@@ -1,0 +1,36 @@
+.detail-wrap{
+	display: flex;
+	flex-direction: column;
+	background-color: #FFF;
+	width: 100%;
+	padding: 20rpx;
+	
+	.title{
+		font-size: 48rpx;
+		font-weight: bold;
+		color: #333333;
+	}
+	
+	.time{
+		padding-top: 32rpx;
+		font-size: 26rpx;
+		font-weight: 400;
+		color: #999999;
+	}
+	
+	.author{
+		padding-top: 22rpx;
+		padding-bottom: 32rpx;
+		font-size: 26rpx;
+		font-weight: 400;
+		color: #666666;
+	}
+	
+	.content{
+		font-size: 32rpx;
+		font-weight: 400;
+		color: #666666;
+	}
+	
+	
+}

@@ -1,0 +1,173 @@
+.list-wrap{
+	display: flex;
+	flex-direction: column;
+	padding: 22rpx;
+	
+	.item{
+		display: flex;
+		flex-direction: column;
+		background-color: #FFF;
+		border-radius: 10rpx;
+		height: 350rpx;
+		margin-bottom: 12rpx;
+		
+		.account{
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: 12rpx;
+			
+			.account-left{
+				display: flex;
+				.account-icon{
+					width: 62rpx;
+					height: 62rpx;
+					margin-left: 32rpx;
+					margin-top: 22rpx;
+				}
+				
+				.account-message{
+					display: flex;
+					flex-direction: column;
+					
+					padding-left: 28rpx;
+					.message-line1{
+						display: flex;
+						align-items: center;
+						padding-top: 29rpx;
+						.user-num{
+							display: flex;
+							align-items: center;
+							font-size: 32rpx;
+							font-weight: bold;
+							.user-num-label{
+								
+							}
+							.user-num-text{
+								
+							}
+						}
+						
+						.meter-link{
+							padding-left: 18rpx;
+							font-size: 26rpx;
+							font-weight: 400;
+							text-decoration: underline;
+							color: #007CFF;
+						}
+					}
+					
+					.message-line2{
+						display: flex;
+						.user-name{
+							padding-top: 8rpx;
+							font-weight: 400;
+							color: #666666;
+						}
+					}
+					
+					.message-line3{
+						display: flex;
+						align-items: center;
+						padding-top: 8rpx;
+						.location-icon{
+							
+						}
+						.location-text{
+							font-weight: 400;
+							color: #666666;
+						}
+					}
+					
+				}
+			}
+			
+			
+			
+			
+			.right-arrow{
+				display: flex;
+				align-items: center;
+				padding-right: 32rpx;
+				color: #999999;
+				font-size: 36rpx;
+			}
+			
+		}
+		
+		.amount{
+			display: flex;
+			
+			.balance-amount{
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+				padding-left: 32rpx;
+				padding-top: 32rpx;
+				.balance-amount-line1{
+					font-size: 36rpx;
+					font-weight: bold;
+					color: #333333;
+				}
+				
+				.balance-amount-line2{
+					font-size: 26rpx;
+					font-weight: 400;
+					color: #999999;
+				}
+				
+				.balance-amount-line3{
+					font-size: 26rpx;
+					font-weight: 400;
+					color: #007DFE;
+					display: flex;
+					align-items: center;
+					
+					.line3-text{
+						
+					}
+					
+					.right-arrow{
+						
+					}
+				}
+			}
+			
+			.month-amount{
+				width: 50%;
+				display: flex;
+				flex-direction: column;
+				padding-left: 32rpx;
+				padding-top: 32rpx;
+				.month-amount-line1{
+					font-size: 36rpx;
+					font-weight: bold;
+					color: #333333;
+				}
+				
+				.month-amount-line2{
+					font-size: 26rpx;
+					font-weight: 400;
+					color: #999999;
+				}
+				
+				.month-amount-line3{
+					font-size: 26rpx;
+					font-weight: 400;
+					color: #007DFE;
+					display: flex;
+					align-items: center;
+					
+					.line3-text{
+						
+					}
+					
+					.right-arrow{
+						
+					}
+				}
+				
+			}
+		}
+		
+	}
+}

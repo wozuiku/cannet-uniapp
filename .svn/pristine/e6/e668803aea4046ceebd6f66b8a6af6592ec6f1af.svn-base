@@ -1,0 +1,153 @@
+<template>
+	<view class="balance-wrap">
+		<view class="top-wrap">
+			<cu-custom :isBack="true" style="color: #FFF;">
+				<block slot="content">{{balanceItem.roomName}}</block>
+			</cu-custom>
+			<view class="user-name">
+				<view class="user-name-tag">{{balanceItem.userName}}</view>
+			</view>
+			<view class="balance">
+				<view class="balance-amount">
+					<view class="balance-amount-text">
+						<view class="balance-amount-integer">￥{{balanceItem.accountBalanceInteger}}.</view>
+						<view class="balance-amount-decimal">{{balanceItem.accountBalanceDecimal}}</view>
+					</view>
+					<view class="balance-amount-label">
+						余额
+					</view>
+				</view>
+				<view class="divid-line">
+					<u-line length="80" direction="col" />
+				</view>
+
+				<view class="unpaid-amount">
+					<view class="unpaid-amount-text">
+						<view class="unpaid-amount-integer">￥{{balanceItem.accountUnpaidInteger}}.</view>
+						<view class="unpaid-amount-decimal">{{balanceItem.accountUnpaidDecimal}}</view>
+					</view>
+					<view class="unpaid-amount-label">
+						未缴
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="float-wrap">
+			<view class="content-wrap">
+				<view class="function shadow-warp">
+					<view class="function-item" @tap="charge_bill">
+						<image class="function-image" src="/static/images/charge/function_bill.png"></image>
+						<view class="function-name">
+							电费账单
+						</view>
+					</view>
+					<view class="function-item">
+						<navigator open-type="navigate" :url="'/pages/charge/enalysis/index/index?balanceItem=' + encodeURIComponent(JSON.stringify(balanceItem))">
+							<image class="function-image" src="/static/images/charge/function_analysis.png"></image>
+							<view class="function-name">
+								用能分析
+							</view>
+						</navigator>
+						
+					</view>
+					<view class="function-item" @tap="toUseElect()">
+						<!-- <navigator open-type="navigate" url="/pages/charge/bill/electricityusage"> -->
+							<image class="function-image" src="/static/images/charge/function_electricity.png"></image>
+							<view class="function-name">
+								用电情况
+							</view>
+						<!-- </navigator> -->
+					</view>
+					<view class="function-item" @tap="to_charge">
+						<image class="function-image" src="/static/images/charge/function_topup.png"></image>
+						<view class="function-name">
+							去充值
+						</view>
+					</view>
+				</view>
+
+				<view class="record-title">
+					<view class="left-line">
+						<u-line length="80"></u-line>
+					</view>
+					<view class="title-text">充值记录</view>
+					<view class="right-line">
+						<u-line length="80"></u-line>
+					</view>
+				</view>
+
+				<view class="record-items">
+					<view class="record-item" v-for="(item,index) in historylist">
+						<view class="record-left">
+							<view class="record-icon">
+								<image class="record-icon" v-if="item.payChannel===0||item.payChannel===1||item.payChannel===2" src="/static/images/charge/record_wechat.png"></image>
+								<image class="record-icon" v-if="item.payChannel===3||item.payChannel===4||item.payChannel===5" src="/static/images/charge/record_zhifubao"></image>
+								<image class="record-icon" v-if="item.payChannel===6||item.payChannel===7||item.payChannel===8" src="/static/images/charge/record_bank.png"></image>
+								<image class="record-icon" v-if="item.payChannel===9" src="/static/icons/pay_account_successful.png"></image>
+							</view>
+							<view class="record-type">
+								<view class="record-type-name">{{PAYTYPE[item.payChannel+'']}}</view>
+								<view class="record-type-time text-gray">{{item.createTime}}</view>
+							</view>
+						</view>
+						<view class="record-right">
+							<view class="record-amount">
+								{{item.money}}元
+							</view>
+						</view>
+					</view>
+
+					<!-- <view class="record-item">
+						<view class="record-left">
+							<view class="record-icon">
+								<image class="record-icon" src="/static/images/charge/record_zhifubao.png"></image>
+							</view>
+							<view class="record-type">
+								<view class="record-type-name">支付宝充值</view>
+								<view class="record-type-time text-gray">2022.1.11 15:20:11</view>
+							</view>
+						</view>
+						<view class="record-right">
+							<view class="record-amount">
+								￥20.00
+							</view>
+						</view>
+					</view>
+
+					<view class="record-item">
+						<view class="record-left">
+							<view class="record-icon">
+								<image class="record-icon" src="/static/images/charge/record_bank.png"></image>
+							</view>
+							<view class="record-type">
+								<view class="record-type-name">银行卡充值</view>
+								<view class="record-type-time text-gray">2022.1.11 15:20:11</view>
+							</view>
+						</view>
+						<view class="record-right">
+							<view class="record-amount">
+								￥20.00
+							</view>
+						</view>
+					</view> -->
+				</view>
+
+				<view class="prompt-text text-gray">
+					<view class="prompt-text text-gray" @tap="tohistory">
+						查看更多
+					</view>
+				</view>
+			</view>
+		</view>
+		</view>
+</template>
+
+<script>
+	import Main from './main'
+	export default Main
+</script>
+
+<style lang="scss" scoped>
+	@import "./main.scss"
+</style>

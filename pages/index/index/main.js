@@ -212,8 +212,6 @@ export default {
 			});
 		},
 
-
-
 		getBalanceList() {
 			this.$http(
 				'charge.balance', {
@@ -262,11 +260,9 @@ export default {
 					}
 				}
 			});
-
 		},
 		
 		getDecimal(str){
-			
 			let pointIndex = str.indexOf(".")
 			let decimal = ''
 			if(pointIndex == -1){
@@ -274,7 +270,6 @@ export default {
 			}else{
 				decimal = str.substring(pointIndex + 1, pointIndex + 3);
 			}
-			
 			return decimal
 		},
 
@@ -304,6 +299,12 @@ export default {
 				url: '/pages/user/bind/index/index'
 			})
 		},
+		
+		jumpBuilding(title) {
+			uni.navigateTo({
+				url: "/pages/public/building?title=" + title
+			})
+		},
 
 		left_arrow() {
 			console.log('left_arrow');
@@ -318,7 +319,7 @@ export default {
 			this.balanceList = this.balanceListAll.slice(this.balanceCurrent, this.balanceCurrent + 2)
 		},
 
-		jump(item) {
+		jumpBalance(item) {
 			console.log('jump item:', item);
 			uni.navigateTo({
 				url: '/pages/charge/balance/index/index?item=' + encodeURIComponent(JSON.stringify(item))
@@ -331,7 +332,35 @@ export default {
 			});
 		},
 		
+		jumpFunc(funcName){
+			console.log('jumpFunc funcName:', funcName);
+			if(funcName == '电费'){
+				uni.navigateTo({
+					url: '/pages/charge/balance/list/index',
+				});
+			}else {
+				this.$u.toast('暂未授权');
+			}
+		},
 		
+		jumpNoticeItem(item){
+			uni.navigateTo({
+				url: "/pages/public/notice/detail/index"
+			})
+		},
+		
+		jumpNoticeList(){
+			uni.navigateTo({
+				url: "/pages/public/notice/index/index"
+			})
+		},
+		
+		adClick(index){
+			console.log('adClick:', index);
+			uni.navigateTo({
+				url: "/pages/public/notice/detail/index"
+			})
+		},
 		
 		initOpenid() {
 			var _this = this;

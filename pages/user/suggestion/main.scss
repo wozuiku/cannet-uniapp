@@ -1,0 +1,53 @@
+.suggestion-wrap{
+	display: flex;
+	flex-direction: column;
+	
+	.prompt-text{
+		padding: 22rpx;
+		font-size: 26rpx;
+		font-weight: 400;
+		color: #999999;
+	}
+	
+	.suggestion-content{
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 760rpx;
+		background: #FFFFFF;
+		
+		.type-title{
+			padding-top: 36rpx;
+			padding-left: 22rpx;
+			font-size: 32rpx;
+			font-weight: 400;
+			color: #333333;
+		}
+		
+		.type-tag{
+			display: flex;
+			padding-top: 16rpx;
+			padding-left: 22rpx;
+			.tag-item{
+				
+			}
+			
+		}
+		
+		.suggestion-box{
+			padding-top: 36rpx;
+			padding-left: 22rpx;
+			
+			.suggestion-input{
+				font-size: 26rpx;
+				font-weight: 400;
+				color: #999999;
+			}
+			
+		}
+		
+	}
+	
+	
+	
+}

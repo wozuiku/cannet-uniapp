@@ -1,0 +1,20 @@
+export default {
+	data(){
+		return {
+			
+		}
+		
+	},
+	
+	onLoad(){
+		
+	},
+	
+	onShow(){
+		
+	},
+	
+	methods:{
+		
+	}
+}

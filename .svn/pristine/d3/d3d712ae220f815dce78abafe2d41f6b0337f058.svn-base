@@ -1,0 +1,43 @@
+.list-wrap{
+	display: flex;
+	flex-direction: column;
+	
+	.item{
+		display: flex;
+		flex-direction: column;
+		.account{
+			.account-icon{
+				
+			}
+			.account-message{
+				.message-line1{
+					
+				}
+				
+				.message-line2{
+					
+				}
+				
+				.message-line3{
+					
+				}
+				
+			}
+			.right-arrow{
+				
+			}
+			
+		}
+		
+		.amount{
+			.balance-amount{
+				
+			}
+			
+			.month-amount{
+				
+			}
+		}
+		
+	}
+}

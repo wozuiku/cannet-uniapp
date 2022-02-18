@@ -1,0 +1,22 @@
+<template>
+	<view>
+		<cu-custom  bgColor="bg-white" :isBack="true" >
+			<block slot="backText"></block>
+			<block slot="content">公告</block>
+		</cu-custom>
+		<scroll-view scroll-y="true" >
+			<view class="suggestion-wrap">
+				
+			</view>
+		</scroll-view>
+	</view>
+</template>
+
+<script>
+	import Main from './main.js'
+	export default Main
+</script>
+
+<style lang="scss" scoped>
+	@import "./main.scss"
+</style>

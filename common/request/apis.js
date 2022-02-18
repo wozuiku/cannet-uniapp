@@ -200,7 +200,7 @@ export default {
 			method: "POST",
 		},
 		"getEnalysisList":{  // 获取用能分析
-			"url":"/api/business/energy/GetAppEnergyAnalysis",
+			"url":"/api/settlement/energyreport/GetAppEnergyAnalysis",
 		}
 	},
 
@@ -234,6 +234,16 @@ export default {
 			"url":"/api/payment/paymentorder/GetOrderList",
 			auth: true,
 			method: "GET",
+		},
+		"getOrderDetails":{//获取订单详情
+			"url":"/api/payment/paymentorder/GetOrderDetails",
+			auth: true,
+			method: "GET",
+		},
+		"createAppRefund":{//添加APP退款订单
+			"url":"/api/payment/refundorder/CreateAppRefund",
+			auth: true,
+			method: "POST",
 		}
 	}
 

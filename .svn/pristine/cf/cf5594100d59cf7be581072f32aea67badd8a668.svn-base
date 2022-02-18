@@ -1,0 +1,46 @@
+<template>
+	<view>
+		<cu-custom  bgColor="bg-white" :isBack="true" >
+			<block slot="backText"></block>
+			<block slot="content">电费</block>
+		</cu-custom>
+		<scroll-view scroll-y="true">
+			<view class="list-wrap">
+				<view class="item">
+					<view class="account">
+						<view class="account-icon">
+							
+						</view>
+						<view class="account-message">
+							<view class="message-line1"></view>
+							<view class="message-line2"></view>
+							<view class="message-line3"></view>
+							
+						</view>
+						<view class="right-arrow">
+							
+						</view>
+					</view>
+					<view class="amount">
+						<view class="balance-amount">
+							
+						</view>
+						<view class="month-amount">
+							
+						</view>
+					</view>
+				</view>
+				
+			</view>
+		</scroll-view>
+	</view>
+</template>
+
+<script>
+	import Main from './main'
+	export default Main
+</script>
+
+<style lang="scss" scoped>
+	@import "./main.scss"
+</style>
