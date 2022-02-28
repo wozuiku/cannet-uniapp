@@ -56,7 +56,16 @@ export default {
 	methods: {
 		search() {
 			let userInfo = uni.getStorageSync('userInfo');
+<<<<<<< .mine
 			
+||||||| .r1724
+			console.log('search userInfo:', userInfo);
+			console.log('search roomName:', this.form.data);
+=======
+			console.log('search userInfo:', userInfo);
+			console.log('search roomName:', this.form.data);
+			this.form.data.roomName=this.form.data.roomName.trim();
+>>>>>>> .r1796
 			if(!this.form.data.roomName  || this.form.data.roomName.length === 0){
 				this.$u.toast('请输入用户号');
 				return

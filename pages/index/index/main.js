@@ -32,7 +32,46 @@ export default {
 			showLeftArrow: false, //显示左边箭头
 			showRightArrow: false, //显示右边箭头
 			showLine: false, //显示中间间隔直线
-			
+			functionList:[{
+				"icon":'/static/images/index/home_function_01.png',
+				"title":'电费',
+				"url":'/pages/charge/balance/list/index',
+			},{
+				"icon":'/static/images/index/home_function_02.png',
+				"title":'水费',
+				"url":'',
+			},
+			{
+				"icon":'/static/images/index/home_function_03.png',
+				"title":'燃气费',
+				"url":'',
+			},
+			{
+				"icon":'/static/images/index/home_function_04.png',
+				"title":'物业费',
+				"url":'',
+			},
+			{
+				"icon":'/static/images/index/home_function_05.png',
+				"title":'停车费',
+				"url":'',
+			},
+			{
+				"icon":'/static/images/index/home_function_06.png',
+				"title":'报修',
+				"url":'',
+			},
+			{
+				"icon":'/static/images/index/home_function_07.png',
+				"title":'门禁',
+				"url":'',
+			},
+			{
+				"icon":'../../../static/icons/function_home_state.png',
+				"title":'设备状态',
+				"url":'/pages/index/equipment/equipment',
+			},
+			],
 			balanceListAll: [],
 
 			noticeList: [{
@@ -78,7 +117,7 @@ export default {
 			skin: false,
 			listTouchStart: 0,
 			listTouchDirection: null,
-
+			
 			dropdownItemValue: 1,
 			dropdownItemOptions: [{
 					label: '红星美凯龙',
@@ -172,7 +211,8 @@ export default {
 					}
 					
 					//设置apiToken
-					this.setApiToken()
+					this.setApiToken();
+					
 				}else{
 					this.tenantId = ''
 					this.tenantName = ''
@@ -332,11 +372,16 @@ export default {
 			});
 		},
 		
-		jumpFunc(funcName){
-			console.log('jumpFunc funcName:', funcName);
-			if(funcName == '电费'){
+		jumpFunc(item){
+			console.log('jumpFunc funcName:', item);
+			if(item.url!=''&&item.url!=null){
+				console.log(item.url);
+				let url=item.url+"?item=" + encodeURIComponent(JSON.stringify(item))
+				// uni.navigateTo({
+				// 	url: item.url+"?item=" + encodeURIComponent(JSON.stringify(item)),
+				// });
 				uni.navigateTo({
-					url: '/pages/charge/balance/list/index',
+					url: url,
 				});
 			}else {
 				this.$u.toast('暂未授权');
